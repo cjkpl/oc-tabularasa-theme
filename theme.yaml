@@ -1,0 +1,6 @@
+name: TabulaRasa
+description: 'Clean TailwindCSS minimal starter theme. The theme should be usable for developers, rather than end-users. It contains clean, blank canvas that can be used to develop your own websites. It does NOT contain any sub-pages, additional js or css libraries etc. '
+author: CJK.PL
+homepage: 'https://cjk.pl'
+code: tabularasa
+previewImage: 'assets/dist/images/theme-preview.png'

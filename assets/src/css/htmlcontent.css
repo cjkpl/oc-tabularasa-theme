@@ -1,0 +1,45 @@
+.html-content {
+    @apply text-left;
+    @apply leading-relaxed;
+}
+
+.html-content p {
+    padding-bottom: 0.5em;
+}
+
+.html-content ul {
+    @apply list-disc;
+    @apply list-inside;
+}
+
+.html-content ol {
+    @apply list-decimal;
+    @apply list-inside;
+}
+
+.html-content a {
+    @apply text-primary-dark;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: gray;
+}
+
+.html-content h1 {
+    @apply text-4xl
+}
+
+.html-content h2 {
+    @apply text-3xl
+}
+
+.html-content h3 {
+    @apply text-3xl
+}
+
+.html-content h4 {
+    @apply text-2xl
+}
+
+.html-content h5 {
+    @apply text-xl
+}
