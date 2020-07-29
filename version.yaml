@@ -1,1 +1,2 @@
 1.0.0: Initial release
+1.0.1: Updated TailwindCSS requirement to 1.5+; TailwindCSS now supports PurgeCSS internally, and this removes the warning present in previous version.
