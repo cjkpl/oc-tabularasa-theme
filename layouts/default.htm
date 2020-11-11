@@ -7,8 +7,8 @@ description = "Default layout"
         {% partial 'site/meta' %}
     </head>
     <body>
-        {# id='app' is used by Vue; if you don't use vue, you can remove that id #}
-        <div id="app" class="min-h-screen flex flex-col">
+        {# id='app' is used by Vue; if you  use vue, you can add that id to the div below (for global vue instance) #}
+        <div class="min-h-screen flex flex-col">
           {% partial 'site/header' %}
           <main class="container mx-auto flex-grow">
               {% page %}
@@ -18,5 +18,6 @@ description = "Default layout"
         </div>
     {# scripts must be included AFTER the 'app' div, which may be used by Vue and disallow inline scipting #}
     {% partial 'site/scripts' %}
+    {# partial 'site/scripts_alpine' #}
     </body>
 </html>

@@ -4,7 +4,10 @@ module.exports = {
 	'./layouts/**/*.htm',
 	'./pages/**/*.htm',
 	'./partials/**/*.htm',	
-	],
+    ],
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
     theme: {
         colors: {
             primary: {
@@ -35,9 +38,23 @@ module.exports = {
                 dark: '#555',
                 darkest: '#222'
             },
+            gray: {
+                '100': '#f5f5f5',
+                '200': '#eeeeee',
+                '300': '#e0e0e0',
+                '400': '#bdbdbd',
+                '500': '#9e9e9e',
+                '600': '#757575',
+                '700': '#616161',
+                '800': '#424242',
+                '900': '#212121',
+            },
             error: '#FF6363',
             white: '#FFFFFF',
             black: '#000000',
+            red:   '#FF0000',
+            green: '#00FF00',
+            blue:  '#0000FF',
             transparent: 'transparent'
         },
         fontFamily: {

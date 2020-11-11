@@ -1,6 +1,6 @@
 {
   "name": "tabularasa",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simplest TailwindCss boilerplate theme - see git+https://github.com/cjkpl/oc-tabularas-theme",
   "main": "app.js",
   "scripts": {
@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "cross-env": "^7.0.2",
-    "tailwindcss": "^1.5.0",
+    "tailwindcss": "^1.9.0",
+    "@tailwindcss/typography": "^0.2.0",
     "vue": "^2.6.11"
   }
 }

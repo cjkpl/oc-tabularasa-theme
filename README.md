@@ -58,9 +58,28 @@ When you deploy your site, you do not need to copy the node_modules folder! It i
 
 
 ### Activating vue.js
-The theme is ready to support vue - all you have to do is uncomment the contents of assets/src/js/app.js
+The theme is ready to support vue - all you have to do is: 
+* uncomment the contents of assets/src/js/app.js
+* add id="app" to an outer div in the layout - there is a comment in the layout file to assist with that
 When you run npm install in the setup phase, all support libraries for using vue will be downloaded and ready to use, but they will not be loaded unless you activate vue in app.js
+
+### Activating Alpine.js + Spruce.js + Axios
+The theme is alternativel ready to support Alpine.js as a Vue replacement. All you have to do is:
+* in the layouts/default uncomment {% partial 'site/scripts_alpine' %} (replace # with %)
+
+Note: make sure you do not activate both Vue.js and Alpine.js at the same time. Or, if you do, make sure that Vue does not take over the whole DOM - use it locally, otherwise it will conflict with Alpine tags.
 
 ### Theme License
 
 MIT License - check out [LICENSE.md](LICENSE.md) file for MIT license details
+
+### Changelog
+
+#### 1.0.2 - 2020-11-11
+Important / potentially breaking changes!
+* Added `Typography` TailwindCSS plugin to requirements. This replaces htmlcontent.css (removed). Use `prose` class instead of `htmlcontent`.
+* Removed postcss-* from weback.mix.js
+* Added standard "gray-100..900" colors. This will replace now deprecated grey-lightest..darkest - it does not make much sense to use custom version of grey, as grey is pretty much the same whether custom or standard.
+* Modified default layout: id=app now removed, if you need it - add it. Global vue instance was clashing with local Alpine.js apps.
+* Added partials/site/scripts_alpine.htm for those folks who - like me - prefer to switch from Vue to Alpine. Disabled by default. That partial loads: Alpine.js (2.x), Spruce (2.x), and Axios.
+* Updated jquery to 3.5.1 in partials/site/scripts
