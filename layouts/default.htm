@@ -8,9 +8,9 @@ description = "Default layout"
     </head>
     <body>
         {# id='app' is used by Vue; if you  use vue, you can add that id to the div below (for global vue instance) #}
-        <div class="min-h-screen flex flex-col">
+        <div class="flex flex-col min-h-screen font-body">
           {% partial 'site/header' %}
-          <main class="container mx-auto flex-grow">
+          <main class="container flex-grow mx-auto">
               {% page %}
           </main>
 
