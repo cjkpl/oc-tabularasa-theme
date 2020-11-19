@@ -5,3 +5,6 @@
 @import "tailwindcss/utilities";
 
 @import "extra.css";
+
+/* Add you fonts below, example */
+@import "~fontsource-poppins/400.css";
