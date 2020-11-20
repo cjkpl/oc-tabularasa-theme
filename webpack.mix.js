@@ -26,7 +26,7 @@ mix.setPublicPath('./')
     .options({
         terser: {
           extractComments: false,
-        }
+        },
         fileLoaderDirs: {
           fonts: '/assets/dist/fonts', // Where fonts will be loaded from node module
         },
