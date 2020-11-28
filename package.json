@@ -27,6 +27,7 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.3.1",
     "cross-env": "^7.0.2",
     "fontsource-poppins": "^3.0.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
