@@ -1,3 +1,4 @@
 1.0.0: Initial release
 1.0.1: Updated TailwindCSS requirement to 1.5+; TailwindCSS now supports PurgeCSS internally, and this removes the warning present in previous version.
 1.0.2: See read.me for details. Updated TailwindCSS requirement to 1.9+. Removed htmcontent css - replaced with Tailwind `Typography` plugin. Use `prose` class instead of `htmlcontent`.
+2.0.0: See read.me for details. Updated TailwindCSS requirement to 2.0.1+. Added posibility to load google fonts localy via npm
