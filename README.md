@@ -66,7 +66,7 @@ you can open your site with hot-reload at http://localhost:3000
 
 ### Optional CSS: tailwindcss-typography
 
-A plugin that provides a set of prose classes you can use to add beautiful typographic defaults to any vanilla HTML you don't control (like HTML rendered from Markdown, or pulled from a CMS).
+A plugin that provides a set of `prose` classes you can use to add beautiful typographic defaults to any vanilla HTML you don't control (like HTML rendered from Markdown, or pulled from a CMS).
 
 I found it useful to restore basic formatting options after normalize.css removes all formatting.
 Now you can use the prose classes to add sensible typography styles to any vanilla HTML:
@@ -88,6 +88,35 @@ Now you can use the prose classes to add sensible typography styles to any vanil
 ```
 
 Tailwindcss-typography doc : https://github.com/tailwindlabs/tailwindcss-typography
+
+### Optional : load Google Fonts localy
+
+Possibility to add fonts localy via npm `npm install fontsource-{FONT_NAME})`, check https://github.com/fontsource/fontsource for details, the installed font can be imported in `themes/oc-tabularasa-theme/assets/src/css/app.css`, check the example `app.css` loading Poppins regular font.
+
+Example:
+install Poppins font
+
+```
+npm install fontsource-poppins
+```
+
+Import the fonts in `themes/{YOUR_THEME}/assets/src/css/app.css`
+```
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "extra.css";
+
+/* Add you fonts below, example */
+@import "~fontsource-poppins/400.css"; /*Poppins Regular*/
+@import "~fontsource-poppins/500.css"; /*Poppins Medium*/
+@import "~fontsource-poppins/700.css"; /*Poppins Bold*/
+```
+
+#### Why loading font localy ?
+
+- I like manage all my dependencies using npm, even for fonts.
+- Check https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/ to find why self-hosting fonts is significantly faste than loading a typeface from Google Fonts or other hosted font service.
 
 ### Production build
 
@@ -121,25 +150,12 @@ MIT License - check out [LICENSE.md](LICENSE.md) file for MIT license details
 
 ### Changelog
 
-#### 2.0.0 - 2020-11-20
+#### 2.0.0 - 2020-11-28
 
-Important / potentially breaking changes!
+**Important / potentially breaking changes! / Tailwind CSS V2**
 
-- TailwindCSS upgraded to `postcss7-compat@^2.0.1` for compatibility reason with Laravel-mix dependencies (postcss-loader not compatible with postcss8), check https://tailwindcss.com/docs/installation#post-css-7-compatibility-build
-- `Typography` TailwindCSS plugin removed temporarely to satisfy TailwindCSS 2.0.1-compat dependencies.
-- Possibility to add fonts localy via npm `npm install fontsource-{FONT_NAME})`, check https://github.com/fontsource/fontsource for details, the installed font can be imported in `themes/oc-tabularasa-theme/assets/src/css/app.css`.
-  Check https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/ to find why self-hosting fonts is significantly faste than loading a typeface from Google Fonts or other hosted font service.
-
-```
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import "extra.css";
-
-/* Add you fonts below, example */
-@import "~fontsource-poppins/400.css";
-
-```
+- TailwindCSS upgraded to `postcss7-compat@^2.0.1` for compatibility reason with Laravel-mix dependencies (laravel-mix postcss-loader is not compatible with postcss8), check https://tailwindcss.com/docs/installation#post-css-7-compatibility-build
+- Possibility to add fonts localy via npm `npm install fontsource-{FONT_NAME})`, check https://github.com/fontsource/fontsource for details, the installed font can be imported in `themes/{YOUR_THEME}/assets/src/css/app.css`.
 
 #### 1.0.2 - 2020-11-11
 
