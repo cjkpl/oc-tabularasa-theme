@@ -20,7 +20,7 @@ mix.setPublicPath('./')
             'pages/**/*.htm',
             'partials/**/*.htm',
             'assets/dist/js/app.js',
-            'assets/dist/css/style.css'
+            'assets/dist/css/app.css',
         ]
     })
     .options({
@@ -28,6 +28,6 @@ mix.setPublicPath('./')
           extractComments: false,
         },
         fileLoaderDirs: {
-          fonts: '/assets/dist/fonts', // Where fonts will be loaded from node module
+          fonts: '/assets/dist/fonts', // Where fonts will be loaded into from node_modules
         },
     });
