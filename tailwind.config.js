@@ -3,38 +3,38 @@ module.exports = {
 	'./assets/src/**/*.vue',
 	'./layouts/**/*.htm',
 	'./pages/**/*.htm',
-	'./partials/**/*.htm',	
+	'./partials/**/*.htm',
     ],
     plugins: [
-        require('@tailwindcss/typography'),
+        //require('@tailwindcss/typography'), // Removed for compatibility reasons
     ],
     theme: {
         colors: {
             primary: {
                 lightest: '#079BFB',
                 light: '#007BCB',
-                default: '#005C97',
+                DEFAULT: '#005C97',
                 dark: '#004A7A',
                 darkest: '#00375B'
             },
             secondary: {
                 lightest: '#FF8D8D',
                 light: '#DD5656',
-                default: '#C53030',
+                DEFAULT: '#C53030',
                 dark: '#9F1717',
                 darkest: '#760000'
             },
             tertiary: {
                 lightest: '#FFE9BE',
                 light: '#EEC46E',
-                default: '#C59431',
+                DEFAULT: '#C59431',
                 dark: '#8F630C',
                 darkest: '#493100'
             },
             grey: {
                 lightest: '#EEE',
                 light: '#BBB',
-                default: '#888',
+                DEFAULT: '#888',
                 dark: '#555',
                 darkest: '#222'
             },
@@ -58,8 +58,8 @@ module.exports = {
             transparent: 'transparent'
         },
         fontFamily: {
-            body: ['Roboto','sans-serif'],
-            display: ['Roboto', 'sans-serif']
+            body: ['Poppins','sans-serif'],
+            display: ['Poppins', 'sans-serif']
         }
     }
 }

@@ -10,6 +10,7 @@ let postCssPlugins = [
 ];
 
 mix.setPublicPath('./')
+    .setResourceRoot('/themes/oc-tabularasa-theme') //replace "oc-tabularasa-theme" with your theme folder name
     .js('assets/src/js/app.js', 'assets/dist/js')
     .postCss('assets/src/css/app.css', 'assets/dist/css', postCssPlugins)
     .browserSync({
@@ -19,11 +20,14 @@ mix.setPublicPath('./')
             'pages/**/*.htm',
             'partials/**/*.htm',
             'assets/dist/js/app.js',
-            'assets/dist/css/style.css'
+            'assets/dist/css/app.css',
         ]
     })
     .options({
         terser: {
           extractComments: false,
-        }
+        },
+        fileLoaderDirs: {
+          fonts: '/assets/dist/fonts', // Where fonts will be loaded into from node_modules
+        },
     });

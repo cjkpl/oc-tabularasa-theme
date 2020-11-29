@@ -1,2 +1,11 @@
-node_modules
+# Ignore node depenencies
+node_modules/
+
+# Other ignores
+.DS_Store
 package-lock.json
+
+# Ignore everything in the "assets/dist/" directory, except "images" folder
+!assets/dist/
+assets/dist/*
+!assets/dist/images/

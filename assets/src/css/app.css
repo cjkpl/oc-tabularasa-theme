@@ -5,3 +5,12 @@
 @import "tailwindcss/utilities";
 
 @import "extra.css";
+
+/* Add you fonts as below */
+
+/*Poppins Regular*/
+@import "~fontsource-poppins/400.css";
+/*Poppins Medium*/
+@import "~fontsource-poppins/500.css";
+/*Poppins Bold*/
+@import "~fontsource-poppins/700.css";
